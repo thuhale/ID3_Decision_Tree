@@ -1,0 +1,226 @@
+plas <= 127.5 [342 78]
+|	age <= 28.5 [220 20]
+|	|	mass <= 31.4 [130 2]
+|	|	|	preg <= 7.0 [130 1]
+|	|	|	|	pedi <= 0.672 [111 0]: negative
+|	|	|	|	pedi > 0.672 [19 1]
+|	|	|	|	|	pedi <= 0.6865 [0 1]: positive
+|	|	|	|	|	pedi > 0.6865 [19 0]: negative
+|	|	|	preg > 7.0 [0 1]: positive
+|	|	mass > 31.4 [90 18]
+|	|	|	pres <= 37.0 [0 2]: positive
+|	|	|	pres > 37.0 [90 16]
+|	|	|	|	pedi <= 0.5095 [62 6]
+|	|	|	|	|	mass <= 45.4 [62 4]
+|	|	|	|	|	|	insu <= 38.0 [17 4]
+|	|	|	|	|	|	|	plas <= 94.0 [8 0]: negative
+|	|	|	|	|	|	|	plas > 94.0 [9 4]
+|	|	|	|	|	|	|	|	age <= 25.5 [5 4]
+|	|	|	|	|	|	|	|	|	age <= 22.5 [3 0]: negative
+|	|	|	|	|	|	|	|	|	age > 22.5 [2 4]
+|	|	|	|	|	|	|	|	|	|	pres <= 69.0 [2 1]
+|	|	|	|	|	|	|	|	|	|	|	pres <= 55.0 [0 1]: positive
+|	|	|	|	|	|	|	|	|	|	|	pres > 55.0 [2 0]: negative
+|	|	|	|	|	|	|	|	|	|	pres > 69.0 [0 3]: positive
+|	|	|	|	|	|	|	|	age > 25.5 [4 0]: negative
+|	|	|	|	|	|	insu > 38.0 [45 0]: negative
+|	|	|	|	|	mass > 45.4 [0 2]: positive
+|	|	|	|	pedi > 0.5095 [28 10]
+|	|	|	|	|	pres <= 64.5 [9 7]
+|	|	|	|	|	|	plas <= 88.5 [4 0]: negative
+|	|	|	|	|	|	plas > 88.5 [5 7]
+|	|	|	|	|	|	|	mass <= 34.85 [0 4]: positive
+|	|	|	|	|	|	|	mass > 34.85 [5 3]
+|	|	|	|	|	|	|	|	plas <= 114.0 [1 3]
+|	|	|	|	|	|	|	|	|	preg <= 1.0 [1 1]
+|	|	|	|	|	|	|	|	|	|	plas <= 102.0 [1 0]: negative
+|	|	|	|	|	|	|	|	|	|	plas > 102.0 [0 1]: positive
+|	|	|	|	|	|	|	|	|	preg > 1.0 [0 2]: positive
+|	|	|	|	|	|	|	|	plas > 114.0 [4 0]: negative
+|	|	|	|	|	pres > 64.5 [19 3]
+|	|	|	|	|	|	pres <= 79.0 [13 0]: negative
+|	|	|	|	|	|	pres > 79.0 [6 3]
+|	|	|	|	|	|	|	pres <= 85.0 [3 3]
+|	|	|	|	|	|	|	|	preg <= 1.0 [2 0]: negative
+|	|	|	|	|	|	|	|	preg > 1.0 [1 3]
+|	|	|	|	|	|	|	|	|	preg <= 5.0 [0 3]: positive
+|	|	|	|	|	|	|	|	|	preg > 5.0 [1 0]: negative
+|	|	|	|	|	|	|	pres > 85.0 [3 0]: negative
+|	age > 28.5 [122 58]
+|	|	mass <= 26.35 [34 1]
+|	|	|	mass <= 9.65 [0 1]: positive
+|	|	|	mass > 9.65 [34 0]: negative
+|	|	mass > 26.35 [88 57]
+|	|	|	pedi <= 0.625 [75 32]
+|	|	|	|	plas <= 93.5 [26 2]
+|	|	|	|	|	plas <= 28.5 [0 1]: positive
+|	|	|	|	|	plas > 28.5 [26 1]
+|	|	|	|	|	|	preg <= 11.5 [24 0]: negative
+|	|	|	|	|	|	preg > 11.5 [2 1]
+|	|	|	|	|	|	|	mass <= 31.25 [0 1]: positive
+|	|	|	|	|	|	|	mass > 31.25 [2 0]: negative
+|	|	|	|	plas > 93.5 [49 30]
+|	|	|	|	|	skin <= 27.5 [23 24]
+|	|	|	|	|	|	pres <= 84.0 [15 23]
+|	|	|	|	|	|	|	pedi <= 0.468 [12 23]
+|	|	|	|	|	|	|	|	age <= 56.0 [10 23]
+|	|	|	|	|	|	|	|	|	mass <= 27.95 [0 5]: positive
+|	|	|	|	|	|	|	|	|	mass > 27.95 [10 18]
+|	|	|	|	|	|	|	|	|	|	mass <= 29.65 [4 1]
+|	|	|	|	|	|	|	|	|	|	|	plas <= 111.0 [3 0]: negative
+|	|	|	|	|	|	|	|	|	|	|	plas > 111.0 [1 1]
+|	|	|	|	|	|	|	|	|	|	|	|	preg <= 4.5 [0 1]: positive
+|	|	|	|	|	|	|	|	|	|	|	|	preg > 4.5 [1 0]: negative
+|	|	|	|	|	|	|	|	|	|	mass > 29.65 [6 17]
+|	|	|	|	|	|	|	|	|	|	|	preg <= 7.0 [2 13]
+|	|	|	|	|	|	|	|	|	|	|	|	age <= 33.0 [2 2]
+|	|	|	|	|	|	|	|	|	|	|	|	|	plas <= 119.5 [0 2]: positive
+|	|	|	|	|	|	|	|	|	|	|	|	|	plas > 119.5 [2 0]: negative
+|	|	|	|	|	|	|	|	|	|	|	|	age > 33.0 [0 11]: positive
+|	|	|	|	|	|	|	|	|	|	|	preg > 7.0 [4 4]
+|	|	|	|	|	|	|	|	|	|	|	|	pedi <= 0.396 [4 2]
+|	|	|	|	|	|	|	|	|	|	|	|	|	plas <= 107.0 [3 0]: negative
+|	|	|	|	|	|	|	|	|	|	|	|	|	plas > 107.0 [1 2]
+|	|	|	|	|	|	|	|	|	|	|	|	|	|	plas <= 121.0 [0 2]: positive
+|	|	|	|	|	|	|	|	|	|	|	|	|	|	plas > 121.0 [1 0]: negative
+|	|	|	|	|	|	|	|	|	|	|	|	pedi > 0.396 [0 2]: positive
+|	|	|	|	|	|	|	|	age > 56.0 [2 0]: negative
+|	|	|	|	|	|	|	pedi > 0.468 [3 0]: negative
+|	|	|	|	|	|	pres > 84.0 [8 1]
+|	|	|	|	|	|	|	skin <= 18.0 [8 0]: negative
+|	|	|	|	|	|	|	skin > 18.0 [0 1]: positive
+|	|	|	|	|	skin > 27.5 [26 6]
+|	|	|	|	|	|	plas <= 104.0 [12 0]: negative
+|	|	|	|	|	|	plas > 104.0 [14 6]
+|	|	|	|	|	|	|	pres <= 89.0 [14 4]
+|	|	|	|	|	|	|	|	mass <= 34.75 [5 4]
+|	|	|	|	|	|	|	|	|	mass <= 33.4 [5 1]
+|	|	|	|	|	|	|	|	|	|	pres <= 76.0 [5 0]: negative
+|	|	|	|	|	|	|	|	|	|	pres > 76.0 [0 1]: positive
+|	|	|	|	|	|	|	|	|	mass > 33.4 [0 3]: positive
+|	|	|	|	|	|	|	|	mass > 34.75 [9 0]: negative
+|	|	|	|	|	|	|	pres > 89.0 [0 2]: positive
+|	|	|	pedi > 0.625 [13 25]
+|	|	|	|	preg <= 8.5 [13 18]
+|	|	|	|	|	pedi <= 0.6985 [0 5]: positive
+|	|	|	|	|	pedi > 0.6985 [13 13]
+|	|	|	|	|	|	mass <= 33.1 [3 8]
+|	|	|	|	|	|	|	preg <= 4.5 [3 3]
+|	|	|	|	|	|	|	|	plas <= 122.0 [3 1]
+|	|	|	|	|	|	|	|	|	plas <= 105.5 [0 1]: positive
+|	|	|	|	|	|	|	|	|	plas > 105.5 [3 0]: negative
+|	|	|	|	|	|	|	|	plas > 122.0 [0 2]: positive
+|	|	|	|	|	|	|	preg > 4.5 [0 5]: positive
+|	|	|	|	|	|	mass > 33.1 [10 5]
+|	|	|	|	|	|	|	skin <= 28.0 [4 0]: negative
+|	|	|	|	|	|	|	skin > 28.0 [6 5]
+|	|	|	|	|	|	|	|	skin <= 35.5 [0 2]: positive
+|	|	|	|	|	|	|	|	skin > 35.5 [6 3]
+|	|	|	|	|	|	|	|	|	pedi <= 0.8625 [2 3]
+|	|	|	|	|	|	|	|	|	|	preg <= 4.0 [0 2]: positive
+|	|	|	|	|	|	|	|	|	|	preg > 4.0 [2 1]
+|	|	|	|	|	|	|	|	|	|	|	plas <= 37.0 [0 1]: positive
+|	|	|	|	|	|	|	|	|	|	|	plas > 37.0 [2 0]: negative
+|	|	|	|	|	|	|	|	|	pedi > 0.8625 [4 0]: negative
+|	|	|	|	preg > 8.5 [0 7]: positive
+plas > 127.5 [93 155]
+|	mass <= 29.95 [43 22]
+|	|	plas <= 145.0 [30 6]
+|	|	|	preg <= 1.5 [12 0]: negative
+|	|	|	preg > 1.5 [18 6]
+|	|	|	|	insu <= 132.5 [13 6]
+|	|	|	|	|	insu <= 69.5 [13 3]
+|	|	|	|	|	|	pres <= 73.0 [3 3]
+|	|	|	|	|	|	|	preg <= 5.0 [1 3]
+|	|	|	|	|	|	|	|	plas <= 132.0 [1 0]: negative
+|	|	|	|	|	|	|	|	plas > 132.0 [0 3]: positive
+|	|	|	|	|	|	|	preg > 5.0 [2 0]: negative
+|	|	|	|	|	|	pres > 73.0 [10 0]: negative
+|	|	|	|	|	insu > 69.5 [0 3]: positive
+|	|	|	|	insu > 132.5 [5 0]: negative
+|	|	plas > 145.0 [13 16]
+|	|	|	age <= 61.0 [9 16]
+|	|	|	|	age <= 25.5 [3 0]: negative
+|	|	|	|	age > 25.5 [6 16]
+|	|	|	|	|	pres <= 72.0 [0 8]: positive
+|	|	|	|	|	pres > 72.0 [6 8]
+|	|	|	|	|	|	mass <= 27.25 [1 6]
+|	|	|	|	|	|	|	plas <= 151.0 [1 0]: negative
+|	|	|	|	|	|	|	plas > 151.0 [0 6]: positive
+|	|	|	|	|	|	mass > 27.25 [5 2]
+|	|	|	|	|	|	|	pedi <= 0.281 [1 2]
+|	|	|	|	|	|	|	|	preg <= 8.0 [0 2]: positive
+|	|	|	|	|	|	|	|	preg > 8.0 [1 0]: negative
+|	|	|	|	|	|	|	pedi > 0.281 [4 0]: negative
+|	|	|	age > 61.0 [4 0]: negative
+|	mass > 29.95 [50 133]
+|	|	plas <= 157.5 [39 62]
+|	|	|	pedi <= 0.4005 [26 20]
+|	|	|	|	mass <= 45.55 [26 14]
+|	|	|	|	|	pres <= 69.0 [4 7]
+|	|	|	|	|	|	preg <= 1.0 [0 3]: positive
+|	|	|	|	|	|	preg > 1.0 [4 4]
+|	|	|	|	|	|	|	plas <= 131.5 [2 0]: negative
+|	|	|	|	|	|	|	plas > 131.5 [2 4]
+|	|	|	|	|	|	|	|	pres <= 61.0 [0 3]: positive
+|	|	|	|	|	|	|	|	pres > 61.0 [2 1]
+|	|	|	|	|	|	|	|	|	preg <= 6.0 [2 0]: negative
+|	|	|	|	|	|	|	|	|	preg > 6.0 [0 1]: positive
+|	|	|	|	|	pres > 69.0 [22 7]
+|	|	|	|	|	|	pres <= 79.0 [12 1]
+|	|	|	|	|	|	|	preg <= 0.5 [2 1]
+|	|	|	|	|	|	|	|	plas <= 141.5 [2 0]: negative
+|	|	|	|	|	|	|	|	plas > 141.5 [0 1]: positive
+|	|	|	|	|	|	|	preg > 0.5 [10 0]: negative
+|	|	|	|	|	|	pres > 79.0 [10 6]
+|	|	|	|	|	|	|	skin <= 16.5 [5 0]: negative
+|	|	|	|	|	|	|	skin > 16.5 [5 6]
+|	|	|	|	|	|	|	|	mass <= 36.2 [1 5]
+|	|	|	|	|	|	|	|	|	pedi <= 0.376 [0 5]: positive
+|	|	|	|	|	|	|	|	|	pedi > 0.376 [1 0]: negative
+|	|	|	|	|	|	|	|	mass > 36.2 [4 1]
+|	|	|	|	|	|	|	|	|	age <= 22.5 [0 1]: positive
+|	|	|	|	|	|	|	|	|	age > 22.5 [4 0]: negative
+|	|	|	|	mass > 45.55 [0 6]: positive
+|	|	|	pedi > 0.4005 [13 42]
+|	|	|	|	age <= 30.0 [11 11]
+|	|	|	|	|	pres <= 73.0 [3 10]
+|	|	|	|	|	|	skin <= 28.5 [0 7]: positive
+|	|	|	|	|	|	skin > 28.5 [3 3]
+|	|	|	|	|	|	|	pres <= 61.0 [0 3]: positive
+|	|	|	|	|	|	|	pres > 61.0 [3 0]: negative
+|	|	|	|	|	pres > 73.0 [8 1]
+|	|	|	|	|	|	preg <= 3.0 [7 0]: negative
+|	|	|	|	|	|	preg > 3.0 [1 1]
+|	|	|	|	|	|	|	preg <= 5.0 [0 1]: positive
+|	|	|	|	|	|	|	preg > 5.0 [1 0]: negative
+|	|	|	|	age > 30.0 [2 31]
+|	|	|	|	|	plas <= 152.5 [0 27]: positive
+|	|	|	|	|	plas > 152.5 [2 4]
+|	|	|	|	|	|	skin <= 34.5 [0 4]: positive
+|	|	|	|	|	|	skin > 34.5 [2 0]: negative
+|	|	plas > 157.5 [11 71]
+|	|	|	insu <= 629.5 [9 71]
+|	|	|	|	age <= 44.5 [4 56]
+|	|	|	|	|	pedi <= 0.3065 [4 13]
+|	|	|	|	|	|	mass <= 31.4 [2 0]: negative
+|	|	|	|	|	|	mass > 31.4 [2 13]
+|	|	|	|	|	|	|	age <= 37.5 [2 6]
+|	|	|	|	|	|	|	|	preg <= 7.0 [1 6]
+|	|	|	|	|	|	|	|	|	mass <= 45.6 [0 6]: positive
+|	|	|	|	|	|	|	|	|	mass > 45.6 [1 0]: negative
+|	|	|	|	|	|	|	|	preg > 7.0 [1 0]: negative
+|	|	|	|	|	|	|	age > 37.5 [0 7]: positive
+|	|	|	|	|	pedi > 0.3065 [0 43]: positive
+|	|	|	|	age > 44.5 [5 15]
+|	|	|	|	|	preg <= 7.5 [5 9]
+|	|	|	|	|	|	pedi <= 1.1565 [3 9]
+|	|	|	|	|	|	|	mass <= 34.45 [3 3]
+|	|	|	|	|	|	|	|	plas <= 162.5 [0 2]: positive
+|	|	|	|	|	|	|	|	plas > 162.5 [3 1]
+|	|	|	|	|	|	|	|	|	pedi <= 0.8925 [3 0]: negative
+|	|	|	|	|	|	|	|	|	pedi > 0.8925 [0 1]: positive
+|	|	|	|	|	|	|	mass > 34.45 [0 6]: positive
+|	|	|	|	|	|	pedi > 1.1565 [2 0]: negative
+|	|	|	|	|	preg > 7.5 [0 6]: positive
+|	|	|	insu > 629.5 [2 0]: negative

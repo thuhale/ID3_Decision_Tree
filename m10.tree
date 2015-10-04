@@ -1,0 +1,142 @@
+thal = fixed_defect [4 6]: 
+|	ca <= 0.5 [4 0]: negative
+|	ca > 0.5 [0 6]: positive
+thal = normal [84 19]: 
+|	thalach <= 111.5 [0 4]: positive
+|	thalach > 111.5 [84 15]: 
+|	|	age <= 55.5 [56 4]: 
+|	|	|	trestbps <= 113.5 [9 3]: 
+|	|	|	|	oldpeak <= 0.3 [3 3]: negative
+|	|	|	|	oldpeak > 0.3 [6 0]: negative
+|	|	|	trestbps > 113.5 [47 1]: 
+|	|	|	|	oldpeak <= 3.55 [47 0]: negative
+|	|	|	|	oldpeak > 3.55 [0 1]: positive
+|	|	age > 55.5 [28 11]: 
+|	|	|	chol <= 248.5 [14 1]: 
+|	|	|	|	oldpeak <= 2.8 [14 0]: negative
+|	|	|	|	oldpeak > 2.8 [0 1]: positive
+|	|	|	chol > 248.5 [14 10]: 
+|	|	|	|	sex = female [13 3]: 
+|	|	|	|	|	cp = typ_angina [1 0]: negative
+|	|	|	|	|	cp = asympt [3 3]: negative
+|	|	|	|	|	cp = non_anginal [7 0]: negative
+|	|	|	|	|	cp = atyp_angina [2 0]: negative
+|	|	|	|	sex = male [1 7]: positive
+thal = reversable_defect [20 67]: 
+|	cp = typ_angina [3 1]: negative
+|	cp = asympt [5 53]: 
+|	|	oldpeak <= 0.65 [5 10]: 
+|	|	|	chol <= 240.5 [5 2]: negative
+|	|	|	chol > 240.5 [0 8]: positive
+|	|	oldpeak > 0.65 [0 43]: positive
+|	cp = non_anginal [9 10]: 
+|	|	oldpeak <= 1.9 [9 5]: 
+|	|	|	trestbps <= 122.5 [6 0]: negative
+|	|	|	trestbps > 122.5 [3 5]: positive
+|	|	oldpeak > 1.9 [0 5]: positive
+|	cp = atyp_angina [3 3]: negative
+<Predictions for the Test Set Instances>
+1: Actual: negative  Predicted: negative 
+2: Actual: negative  Predicted: negative 
+3: Actual: negative  Predicted: negative 
+4: Actual: negative  Predicted: positive 
+5: Actual: negative  Predicted: positive 
+6: Actual: negative  Predicted: negative 
+7: Actual: negative  Predicted: negative 
+8: Actual: negative  Predicted: negative 
+9: Actual: negative  Predicted: negative 
+10: Actual: negative  Predicted: negative 
+11: Actual: negative  Predicted: negative 
+12: Actual: negative  Predicted: negative 
+13: Actual: negative  Predicted: negative 
+14: Actual: negative  Predicted: positive 
+15: Actual: negative  Predicted: negative 
+16: Actual: negative  Predicted: negative 
+17: Actual: negative  Predicted: negative 
+18: Actual: negative  Predicted: negative 
+19: Actual: negative  Predicted: negative 
+20: Actual: negative  Predicted: negative 
+21: Actual: negative  Predicted: negative 
+22: Actual: negative  Predicted: negative 
+23: Actual: negative  Predicted: negative 
+24: Actual: negative  Predicted: negative 
+25: Actual: negative  Predicted: negative 
+26: Actual: negative  Predicted: negative 
+27: Actual: negative  Predicted: negative 
+28: Actual: negative  Predicted: negative 
+29: Actual: negative  Predicted: positive 
+30: Actual: negative  Predicted: negative 
+31: Actual: negative  Predicted: negative 
+32: Actual: negative  Predicted: positive 
+33: Actual: negative  Predicted: negative 
+34: Actual: negative  Predicted: negative 
+35: Actual: negative  Predicted: negative 
+36: Actual: negative  Predicted: negative 
+37: Actual: negative  Predicted: negative 
+38: Actual: negative  Predicted: negative 
+39: Actual: negative  Predicted: negative 
+40: Actual: negative  Predicted: negative 
+41: Actual: negative  Predicted: negative 
+42: Actual: negative  Predicted: negative 
+43: Actual: negative  Predicted: negative 
+44: Actual: negative  Predicted: negative 
+45: Actual: negative  Predicted: negative 
+46: Actual: negative  Predicted: negative 
+47: Actual: negative  Predicted: negative 
+48: Actual: negative  Predicted: negative 
+49: Actual: negative  Predicted: negative 
+50: Actual: negative  Predicted: negative 
+51: Actual: negative  Predicted: negative 
+52: Actual: negative  Predicted: negative 
+53: Actual: negative  Predicted: negative 
+54: Actual: negative  Predicted: negative 
+55: Actual: negative  Predicted: negative 
+56: Actual: negative  Predicted: negative 
+57: Actual: negative  Predicted: negative 
+58: Actual: positive  Predicted: positive 
+59: Actual: positive  Predicted: negative 
+60: Actual: positive  Predicted: negative 
+61: Actual: positive  Predicted: positive 
+62: Actual: positive  Predicted: negative 
+63: Actual: positive  Predicted: positive 
+64: Actual: positive  Predicted: negative 
+65: Actual: positive  Predicted: positive 
+66: Actual: positive  Predicted: negative 
+67: Actual: positive  Predicted: negative 
+68: Actual: positive  Predicted: negative 
+69: Actual: positive  Predicted: negative 
+70: Actual: positive  Predicted: positive 
+71: Actual: positive  Predicted: positive 
+72: Actual: positive  Predicted: negative 
+73: Actual: positive  Predicted: positive 
+74: Actual: positive  Predicted: negative 
+75: Actual: positive  Predicted: negative 
+76: Actual: positive  Predicted: positive 
+77: Actual: positive  Predicted: positive 
+78: Actual: positive  Predicted: negative 
+79: Actual: positive  Predicted: negative 
+80: Actual: positive  Predicted: positive 
+81: Actual: positive  Predicted: negative 
+82: Actual: positive  Predicted: negative 
+83: Actual: positive  Predicted: positive 
+84: Actual: positive  Predicted: negative 
+85: Actual: positive  Predicted: positive 
+86: Actual: positive  Predicted: positive 
+87: Actual: positive  Predicted: negative 
+88: Actual: positive  Predicted: negative 
+89: Actual: positive  Predicted: positive 
+90: Actual: positive  Predicted: positive 
+91: Actual: positive  Predicted: negative 
+92: Actual: positive  Predicted: positive 
+93: Actual: positive  Predicted: positive 
+94: Actual: positive  Predicted: positive 
+95: Actual: positive  Predicted: negative 
+96: Actual: positive  Predicted: positive 
+97: Actual: positive  Predicted: negative 
+98: Actual: positive  Predicted: positive 
+99: Actual: positive  Predicted: positive 
+100: Actual: positive  Predicted: negative 
+101: Actual: positive  Predicted: positive 
+102: Actual: positive  Predicted: positive 
+103: Actual: positive  Predicted: negative 
+Number of correctly classified: 75  Total number of test instances: 103
