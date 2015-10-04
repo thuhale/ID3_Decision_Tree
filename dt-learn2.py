@@ -3,8 +3,12 @@ import sys
 import re
 import pandas as pd
 import math
+import random
+
 from collections import Counter, defaultdict
 from node import node
+import numpy as np
+import matplotlib.pyplot as plt
 
 
 #calculate entropy - given a list of probability, entropy = sum(-p*log(p, base=2)) with p >0
@@ -68,13 +72,11 @@ def numerical_attribute_threshold(df, attribute, label):
             if string3[i] != string3[i+1]:
                 threshold = 0.5*(string2[i]+string2[i+1])
                 thresholds.append(threshold)
-        unique = []
-        [unique.append(item) for item in thresholds if item not in unique]
 
-        unique.sort(reverse = True)
-        best_threshold = unique[0]
+        thresholds.sort(reverse = True)
+        best_threshold = thresholds[0]
         conditional_entropy = 1
-        for threshold in unique:
+        for threshold in thresholds:
             left = df[df[attribute] <= threshold]
             left_entropy = data_entropy(left,label)
             right = df[df[attribute] > threshold]
@@ -167,20 +169,22 @@ def printTree(currentNode, fo):
 
 # Generate predictions for the test data, based on previously built decision tree
 def generatePredictions(df, label, rootNode, fo):
-    fo.write("<Predictions for the Test Set Instances>\n")
+    #fo.write(" <Predictions for the Test Set Instances>\n")
     correctCount = 0
     rowsCount = 0
 
     for index, row in df.iterrows():
         rowsCount += 1
-        fo.write("%d: Actual: %s  " %(index+1, row[label]))
+        #fo.write("%d: Actual: %s  " %(index+1, row[label]))
         predict_value = treeTraversal(row, rootNode, fo)
-        fo.write("Predicted: %s \n" %predict_value)
+        #fo.write("Predicted: %s \n" %predict_value)
         if (predict_value == row[label]):
             correctCount += 1
 
-    fo.write("Number of correctly classified: %d  Total number of test instances: %d" %(correctCount, rowsCount))
-    return
+    #fo.write("Number of correctly classified: %d  Total number of test instances: %d" %(correctCount, rowsCount))
+    accuracyRate = correctCount / rowsCount
+    fo.write(str.format("Prediction accuracy: %.2f \n" %accuracyRate))
+    return accuracyRate
 
 # get the predicted classification for the current test row
 def treeTraversal(dfRow, currentNode, fo):
@@ -231,19 +235,73 @@ def readArffFile(filename):
     return attribute_dict, df
 
 
+def pickRandomTrainSubset(df, percentage):
+    inputSize = len(df.index)
+    targetSize = inputSize * percentage // 100
+    samplingSet = range(0, inputSize)
+    data = []
+    for i in range(0, targetSize):
+        index = random.choice(samplingSet)
+        data.append(df.iloc[index])
+        samplingSet.remove(index)
+    return pd.DataFrame(data, columns = df.columns.values)
+
+def findMinMaxAvg(valueList):
+    if len(valueList)==0: return -1,-1,-1
+    max = valueList[0]
+    min = max
+    totals = 0
+    for value in valueList:
+        totals += value
+        if value > max: max = value
+        if value < min: min = value
+    return min, max, (totals/len(valueList))
+
 train_file_name = sys.argv[1]
 test_file_name = sys.argv[2]
-m = int(sys.argv[3])
+m = 4
 
 attribute_dict, df = readArffFile(train_file_name)
-rootNode = node(0, '', '', '=')
-buildtree(df, "class", m, rootNode)
-attribute_dict, df = readArffFile(test_file_name)
+test_attr_dict, testDf = readArffFile(test_file_name)
 
 output_file = format("m%d.tree" %(m))
 fo = open(output_file, 'w+')
-printTree(rootNode, fo)
-generatePredictions(df, "class", rootNode, fo)
+
+avgAccuracy = []
+minAccuracy = []
+maxAccuracy = []
+rateList = [5, 10, 20, 50, 100]
+for rate in rateList:
+    accuracyList = []
+    fo.write(str.format("Rate=%d%%: \n" %rate))
+    if rate==100: maxIteration=1
+    else: maxIteration=10
+
+    for iteration in range(0, maxIteration):
+        smallDf = pickRandomTrainSubset(df, rate)
+        rootNode = node(0, '', '', '=')
+        buildtree(smallDf, "class", m, rootNode)
+        #printTree(rootNode, fo)
+        accuracyList.append(generatePredictions(testDf, "class", rootNode, fo))
+    min, max, avg = findMinMaxAvg(accuracyList)
+    avgAccuracy.append(avg)
+    minAccuracy.append(min)
+    maxAccuracy.append(max)
+    fo.write(str.format("min=%.2f , max=%.2f ,  avg=%.2f \n\n" %(min, max, avg)))
+
+# Plot the learning curve from 5% to 100%
+x= [0,1,2,3,4]
+my_xticks = ['5%','10%','20%','50%','100%']
+plt.xticks(x, my_xticks)
+plt.plot(x, avgAccuracy)
+plt.plot(x, minAccuracy)
+plt.plot(x, maxAccuracy)
+plt.axis([0, 4, 0, 1])
+plt.xlabel('Training set size')
+plt.ylabel('Accuracy rate')
+plt.legend(['Average accuracy', 'Min accuracy', 'Max accuracy'], loc='upper left')
+plt.show()
+
 fo.close()
 
 
